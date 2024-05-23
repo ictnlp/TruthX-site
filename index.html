@@ -106,7 +106,7 @@
                   <div class="single-image-display has-text-centered">
                   <p>
                     <br>
-                    <img src="meta/images/ill.png" alt="MY ALT TEXT" style="width: 90%;"/>
+                    <img src="meta/images/ill.pdf" alt="MY ALT TEXT" style="width: 100%;"/>
                   </p>
                 </div>
                 </div>
@@ -127,7 +127,7 @@
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <source src="meta/video/demo.mov"
-        type="video/mov">
+        type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
         GUI interface to intuitively compare the editing effect of TruthX on LLM, refer to <a href="https://github.com/ictnlp/TruthX" target="_blank">code of TruthX</a>.
@@ -162,7 +162,7 @@
             <p>
               <strong>TruthXis an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space.</strong> <br>
               To edit LLM in the truthful space without compromising its generative capabilities, TruthX decouples the LLM’s internal representations into truthful and semantic latent spaces respectively using an autoencoder. Then, TruthX employs contrastive learning to probe representations with similar semantics but opposite truthfulness and those with similar truthfulness but different semantics within these two latent spaces. During inference, TruthX effectively regulates the truthfulness of LLM by editing it in the truthful space, while ensuring that the generation capability remains intact.<br><br>
-              Steps of developing TruthX:<br>
+              <font color="red">Steps of developing TruthX</font>:<br>
               1. <strong>Extracting Internal Representations</strong>:<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(1) Prepare preference data (triples &lt; question, truthful answer, hallucinatory answer &gt;).<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(2) Stimulate LLM with preference data ( truthful and hallucinatory answer respectively) to extract the corresponding internal representations.<br>
@@ -171,7 +171,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;(2) Identify a truthful editing direction within truthful space, which points from the center of untruthful representations to the center of truthful representations.<br>
               3. <strong>Editing in Truthful Space</strong>:<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(1) During inference, TruthX maps internal representations within LLM into truthful spaces, and then edits the latent representations along truthful editing direction.<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;(2) puts the representation after editing back to LLM.
+              &nbsp;&nbsp;&nbsp;&nbsp;(2) Puts the edited representation back to LLM.<br>
             </p>
             <center>
               <img src="meta/images/model.png" width="100%">
@@ -183,7 +183,7 @@
 
   <section class="section hero is-small">
     <div class="container is-max-desktop">
-          <h2 class="title is-3 has-text-centered">🎈Insight of TruthX 🎈</h2>
+          <h2 class="title is-3 has-text-centered">Insights of TruthX 🎈</h2>
           <div class="content has-text-justified">
             <p>
               <strong>1. TruthX effectively improves the truthfulness of 13 advanced LLMs by an average of 20% on TruthfulQA benchmark</strong>
@@ -203,14 +203,14 @@
               <strong>3. Layer-wise analysis indicates that the representations in middle layers of LLMs exhibit a higher correlation with the truthfulness of responses</strong>
             </p>
             <center>
-            <img src="meta/images/layer.png" alt="MY ALT TEXT" style="width: 55%;"/><img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 45%;"/>
+            <img src="meta/images/layer.png" alt="MY ALT TEXT" style="width: 100%;"/>
             </center>
             <br><br><br>
             <p>
               <strong>4. Truthful space extracted from homologous LLMs (i.e., trained sequentially) exhibits a high degree of similarity </strong>
             </p>
             <center>
-            <img src="meta/images/llms.png" alt="MY ALT TEXT" style="width: 55%;"/><img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 45%;"/>
+            <img src="meta/images/llms.png" alt="MY ALT TEXT" style="width: 55%;"/>
             </center>
           </div>
     </div>
