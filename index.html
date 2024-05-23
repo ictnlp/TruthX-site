@@ -180,83 +180,68 @@
     </div>
   </section>
 
-
- <!-- Case display module -->
- <section class="section hero is-medium">
+<!-- Case showcase -->
+<section class="section hero is-medium">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Case Display</h2>
-      <div class="field">
-        <label class="label">Select a Question:</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select id="questionSelect" onchange="updateAnswers()">
-              <option value="question1">Question 1</option>
-              <option value="question2">Question 2</option>
-              <option value="question3">Question 3</option>
-              <!-- Add more questions as needed -->
-            </select>
+      <h2 class="title is-3 has-text-centered">Case Showcase</h2>
+      <div class="content has-text-justified">
+        <div class="field">
+          <label class="label">Select Question</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="questionSelect">
+                <option value="question1">What is the capital of France?</option>
+                <option value="question2">Who wrote '1984'?</option>
+                <option value="question3">What is the speed of light?</option>
+              </select>
+            </div>
           </div>
         </div>
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr>
+              <th>Model A</th>
+              <th>Model B</th>
+              <th>Model C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="answerA">Answer A</td>
+              <td id="answerB">Answer B</td>
+              <td id="answerC">Answer C</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="table is-fullwidth is-striped is-hoverable">
-        <thead>
-          <tr>
-            <th>Answer A</th>
-            <th>Answer B</th>
-            <th>Answer C</th>
-          </tr>
-        </thead>
-        <tbody id="answerTable">
-          <!-- Answers will be dynamically inserted here based on selected question -->
-        </tbody>
-      </table>
     </div>
   </section>
-  <!-- End case display module -->
-
+  
   <script>
-    const answers = {
-      question1: [
-        { a: "Answer A1", b: "Answer B1", c: "Answer C1" },
-        { a: "Answer A2", b: "Answer B2", c: "Answer C2" },
-        { a: "Answer A3", b: "Answer B3", c: "Answer C3" }
-      ],
-      question2: [
-        { a: "Answer A4", b: "Answer B4", c: "Answer C4" },
-        { a: "Answer A5", b: "Answer B5", c: "Answer C5" },
-        { a: "Answer A6", b: "Answer B6", c: "Answer C6" }
-      ],
-      question3: [
-        { a: "Answer A7", b: "Answer B7", c: "Answer C7" },
-        { a: "Answer A8", b: "Answer B8", c: "Answer C8" },
-        { a: "Answer A9", b: "Answer B9", c: "Answer C9" }
-      ]
-      // Add more questions and answers as needed
-    };
-
-    function updateAnswers() {
-      const questionSelect = document.getElementById('questionSelect');
-      const selectedQuestion = questionSelect.value;
-      const answerTable = document.getElementById('answerTable');
+    document.getElementById('questionSelect').addEventListener('change', function() {
+      const question = this.value;
       
-      answerTable.innerHTML = ''; // Clear existing rows
-
-      const selectedAnswers = answers[selectedQuestion];
+      let answers = {
+        question1: {
+          modelA: 'Paris',
+          modelB: 'Paris',
+          modelC: 'Paris'
+        },
+        question2: {
+          modelA: 'George Orwell',
+          modelB: 'George Orwell',
+          modelC: 'George Orwell'
+        },
+        question3: {
+          modelA: '299,792,458 meters per second',
+          modelB: '299,792,458 meters per second',
+          modelC: '299,792,458 meters per second'
+        }
+      };
       
-      selectedAnswers.forEach(answer => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${answer.a}</td>
-          <td>${answer.b}</td>
-          <td>${answer.c}</td>
-        `;
-        answerTable.appendChild(row);
-      });
-    }
-
-    // Initialize table with the first question's answers
-    document.addEventListener('DOMContentLoaded', () => {
-      updateAnswers();
+      document.getElementById('answerA').textContent = answers[question].modelA;
+      document.getElementById('answerB').textContent = answers[question].modelB;
+      document.getElementById('answerC').textContent = answers[question].modelC;
     });
   </script>
 
