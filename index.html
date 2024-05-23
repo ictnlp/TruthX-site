@@ -106,7 +106,7 @@
                   <div class="single-image-display has-text-centered">
                   <p>
                     <br>
-                    <img src="meta/images/ill.pdf" alt="MY ALT TEXT" style="width: 100%;"/>
+                    <img src="meta/images/ill.png" alt="MY ALT TEXT" style="width: 100%;"/>
                   </p>
                 </div>
                 </div>
@@ -171,7 +171,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;(2) Identify a truthful editing direction within truthful space, which points from the center of untruthful representations to the center of truthful representations.<br>
               3. <strong>Editing in Truthful Space</strong>:<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(1) During inference, TruthX maps internal representations within LLM into truthful spaces, and then edits the latent representations along truthful editing direction.<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;(2) Puts the edited representation back to LLM.<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(2) Put the edited representation back to LLM.<br>
             </p>
             <center>
               <img src="meta/images/model.png" width="100%">
@@ -179,6 +179,46 @@
           </div>
     </div>
   </section>
+
+
+ <!-- Case display module -->
+ <section class="section hero is-medium">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Case Display</h2>
+      <div class="field">
+        <label class="label">Select a Question:</label>
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select id="questionSelect">
+              <option value="question1">Question 1</option>
+              <option value="question2">Question 2</option>
+              <option value="question3">Question 3</option>
+              <!-- Add more questions as needed -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <table class="table is-fullwidth is-striped is-hoverable">
+        <thead>
+          <tr>
+            <th>Answer A</th>
+            <th>Answer B</th>
+            <th>Answer C</th>
+          </tr>
+        </thead>
+        <tbody id="answerTable">
+          <!-- Example row -->
+          <tr>
+            <td>Answer A for selected question</td>
+            <td>Answer B for selected question</td>
+            <td>Answer C for selected question</td>
+          </tr>
+          <!-- Additional rows will be dynamically inserted here based on selected question -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- End case display module -->
 
 
   <section class="section hero is-small">
