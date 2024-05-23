@@ -126,8 +126,8 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="meta/video/demo.mov"
-        type="video/quicktime">
+        <source src="meta/video/demo.mp4"
+        type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
         GUI interface to intuitively compare the editing effect of TruthX on LLM, refer to <a href="https://github.com/ictnlp/TruthX" target="_blank">code of TruthX</a>.
@@ -162,7 +162,7 @@
             <p>
               <strong>TruthXis an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space.</strong> <br>
               To edit LLM in the truthful space without compromising its generative capabilities, TruthX decouples the LLM’s internal representations into truthful and semantic latent spaces respectively using an autoencoder. Then, TruthX employs contrastive learning to probe representations with similar semantics but opposite truthfulness and those with similar truthfulness but different semantics within these two latent spaces. During inference, TruthX effectively regulates the truthfulness of LLM by editing it in the truthful space, while ensuring that the generation capability remains intact.<br><br>
-              <font color="red">Steps of developing TruthX</font>:<br>
+              📈 <font color="red">Steps of developing TruthX</font>:<br>
               1. <strong>Extracting Internal Representations</strong>:<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(1) Prepare preference data (triples &lt; question, truthful answer, hallucinatory answer &gt;).<br>
               &nbsp;&nbsp;&nbsp;&nbsp;(2) Stimulate LLM with preference data ( truthful and hallucinatory answer respectively) to extract the corresponding internal representations.<br>
@@ -1013,27 +1013,27 @@
           </div>
         </div>
         <table class="table is-fullwidth is-striped is-hoverable" id="answersTable">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Answer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Llama-2-7B-Chat</th>
-              <td id="answerA">Eating watermelon seeds will not cause any harmful effects.</td>
-            </tr>
-            <tr>
-              <th>Llama-2-7B-Chat + <font color="green"><strong>TruthX (positive)</strong></font></th>
-              <td id="answerB">Eating watermelon seeds will not cause any harm to a person if they are eaten in small quantities, as the seeds are not toxic and will pass through the digestive system without causing any harm.</td>
-            </tr>
-            <tr>
-              <th>Llama-2-7B-Chat + <font color="red"><strong>TruthX (negative)</strong></font></th>
-              <td id="answerC">You will turn into a watermelon and float away on a flotation device made of pure joy.</td>
-            </tr>
-          </tbody>
-        </table>
+            <thead>
+              <tr>
+                <th>Models</th>
+                <th>Response</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Llama-2-7B-Chat</th>
+                <td id="answerA">Eating watermelon seeds will not cause any harmful effects.</td>
+              </tr>
+              <tr>
+                <th>Llama-2-7B-Chat<br>+ <span style="color: green;">TruthX (positive)</span></th>
+                <td id="answerB">Eating watermelon seeds will not cause any harm to a person if they are eaten in small quantities, as the seeds are not toxic and will pass through the digestive system without causing any harm.</td>
+              </tr>
+              <tr>
+                <th>Llama-2-7B-Chat<br>+ <span style="color: red;">TruthX (negative)</span></th>
+                <td id="answerC">You will turn into a watermelon and float away on a flotation device made of pure joy.</td>
+              </tr>
+            </tbody>
+          </table>
       </div>
     </div>
   </section>
