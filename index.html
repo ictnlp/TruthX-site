@@ -189,7 +189,7 @@
         <label class="label">Select a Question:</label>
         <div class="control">
           <div class="select is-fullwidth">
-            <select id="questionSelect">
+            <select id="questionSelect" onchange="updateAnswers()">
               <option value="question1">Question 1</option>
               <option value="question2">Question 2</option>
               <option value="question3">Question 3</option>
@@ -207,19 +207,58 @@
           </tr>
         </thead>
         <tbody id="answerTable">
-          <!-- Example row -->
-          <tr>
-            <td>Answer A for selected question</td>
-            <td>Answer B for selected question</td>
-            <td>Answer C for selected question</td>
-          </tr>
-          <!-- Additional rows will be dynamically inserted here based on selected question -->
+          <!-- Answers will be dynamically inserted here based on selected question -->
         </tbody>
       </table>
     </div>
   </section>
   <!-- End case display module -->
 
+  <script>
+    const answers = {
+      question1: [
+        { a: "Answer A1", b: "Answer B1", c: "Answer C1" },
+        { a: "Answer A2", b: "Answer B2", c: "Answer C2" },
+        { a: "Answer A3", b: "Answer B3", c: "Answer C3" }
+      ],
+      question2: [
+        { a: "Answer A4", b: "Answer B4", c: "Answer C4" },
+        { a: "Answer A5", b: "Answer B5", c: "Answer C5" },
+        { a: "Answer A6", b: "Answer B6", c: "Answer C6" }
+      ],
+      question3: [
+        { a: "Answer A7", b: "Answer B7", c: "Answer C7" },
+        { a: "Answer A8", b: "Answer B8", c: "Answer C8" },
+        { a: "Answer A9", b: "Answer B9", c: "Answer C9" }
+      ]
+      // Add more questions and answers as needed
+    };
+
+    function updateAnswers() {
+      const questionSelect = document.getElementById('questionSelect');
+      const selectedQuestion = questionSelect.value;
+      const answerTable = document.getElementById('answerTable');
+      
+      answerTable.innerHTML = ''; // Clear existing rows
+
+      const selectedAnswers = answers[selectedQuestion];
+      
+      selectedAnswers.forEach(answer => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${answer.a}</td>
+          <td>${answer.b}</td>
+          <td>${answer.c}</td>
+        `;
+        answerTable.appendChild(row);
+      });
+    }
+
+    // Initialize table with the first question's answers
+    document.addEventListener('DOMContentLoaded', () => {
+      updateAnswers();
+    });
+  </script>
 
   <section class="section hero is-small">
     <div class="container is-max-desktop">
