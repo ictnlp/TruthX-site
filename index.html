@@ -181,6 +181,7 @@
   </section>
 
 
+
 <!-- Case showcase -->
 <section class="section hero is-medium">
     <div class="container is-max-desktop">
@@ -1012,7 +1013,7 @@
             </div>
           </div>
         </div>
-        <table class="table is-fullwidth is-striped is-hoverable" id="answersTable">
+        <!-- <table class="table is-fullwidth is-striped is-hoverable" id="answersTable">
             <thead>
               <tr>
                 <th>Models</th>
@@ -1033,10 +1034,48 @@
                 <td id="answerC">You will turn into a watermelon and float away on a flotation device made of pure joy.</td>
               </tr>
             </tbody>
-          </table>
+          </table> -->
+          <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                #answersTable th:first-child {
+                width: 200px; /* 或根据需要调整此值 */
+                white-space: nowrap;
+                }
+            </style>
+            </head>
+            <body>
+            <table class="table is-fullwidth is-striped is-hoverable" id="answersTable">
+                <thead>
+                <tr>
+                    <th>Models</th>
+                    <th>Response</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>Llama-2-7B-Chat</th>
+                    <td id="answerA">Eating watermelon seeds will not cause any harmful effects.</td>
+                </tr>
+                <tr>
+                    <th>Llama-2-7B-Chat<br>+ <span style="color: green;">TruthX (positive)</span></th>
+                    <td id="answerB">Eating watermelon seeds will not cause any harm to a person if they are eaten in small quantities, as the seeds are not toxic and will pass through the digestive system without causing any harm.</td>
+                </tr>
+                <tr>
+                    <th>Llama-2-7B-Chat<br>+ <span style="color: red;">TruthX (negative)</span></th>
+                    <td id="answerC">You will turn into a watermelon and float away on a flotation device made of pure joy.</td>
+                </tr>
+                </tbody>
+            </table>
+            </body>
+            </html>
       </div>
     </div>
   </section>
+
+  
 
 
 
