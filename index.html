@@ -180,75 +180,10 @@
     </div>
   </section>
 
-<!-- Case showcase -->
-<section class="section hero is-medium">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Case Showcase</h2>
-      <div class="content has-text-justified">
-        <div class="field">
-          <label class="label">Select Question</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select id="questionSelect">
-                <option value="question1">What is the capital of France?</option>
-                <option value="question2">Who wrote '1984'?</option>
-                <option value="question3">What is the speed of light?</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <table class="table is-fullwidth is-striped is-hoverable">
-          <thead>
-            <tr>
-              <th>Model A</th>
-              <th>Model B</th>
-              <th>Model C</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="answerA">Answer A</td>
-              <td id="answerB">Answer B</td>
-              <td id="answerC">Answer C</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-  
-  <script>
-    document.getElementById('questionSelect').addEventListener('change', function() {
-      const question = this.value;
-      
-      let answers = {
-        question1: {
-          modelA: 'Paris',
-          modelB: 'Paris',
-          modelC: 'Paris'
-        },
-        question2: {
-          modelA: 'George Orwell',
-          modelB: 'George Orwell',
-          modelC: 'George Orwell'
-        },
-        question3: {
-          modelA: '299,792,458 meters per second',
-          modelB: '299,792,458 meters per second',
-          modelC: '299,792,458 meters per second'
-        }
-      };
-      
-      document.getElementById('answerA').textContent = answers[question].modelA;
-      document.getElementById('answerB').textContent = answers[question].modelB;
-      document.getElementById('answerC').textContent = answers[question].modelC;
-    });
-  </script>
-
 
 
 <!-- Case showcase -->
-<section class="section hero is-medium">
+<section class="section hero is-medium is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Case Showcase</h2>
       <div class="content has-text-justified">
