@@ -126,18 +126,20 @@
       <div class="hero-body">
         <h2 class="title is-3 has-text-centered">GUI Interface</h2>
         <div class="columns is-centered">
-            <video poster="" id="tree" autoplay controls muted loop width="100%">
+            <div class="column is-full">
+            <video poster="" id="tree1" autoplay controls muted loop width="100%">
               <!-- Your video here -->
               <source src="meta/video/demo_pos.mp4" type="video/mp4">
             </video>
             <h3 class="subtitle has-text-centered"><font color="green">TruthX (positive editing)</font> 😊</h3>
-            <br>
-            <video poster="" id="tree" autoplay controls muted loop width="100%">
+        </div>
+        <div class="column is-full">
+            <video poster="" id="tree2" autoplay controls muted loop width="100%">
               <!-- Your video here -->
               <source src="meta/video/demo_neg.mp4" type="video/mp4">
             </video>
             <h3 class="subtitle has-text-centered"><font color="red">TruthX (negative editing)</font> 🤡</h3>
-
+        </div>
         </div>
         <h2 class="subtitle has-text-centered">
             GUI interface to intuitively compare the editing effect of TruthX on LLM. Refer to <a href="https://github.com/ictnlp/TruthX" target="_blank">code of TruthX</a>.
