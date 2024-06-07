@@ -56,16 +56,16 @@
                 <div class="is-size-5 publication-authors">
                   <!-- Paper authors -->
                   <span class="author-block">
-                    <a href="https://zhangshaolei1998.github.io/" target="_blank">Shaolei Zhang</a><sup>1,2</sup>,</span>
+                    <a href="https://zhangshaolei1998.github.io/" target="_blank">Shaolei Zhang</a><sup>1,3</sup>,</span>
                     <span class="author-block">
-                      <a href="https://tianyu0313.github.io/" target="_blank">Tian Yu</a><sup>1,2</sup>,</span>
+                      <a href="https://tianyu0313.github.io/" target="_blank">Tian Yu</a><sup>1,3</sup>,</span>
                       <span class="author-block">
-                        <a href="https://people.ucas.edu.cn/~yangfeng?language=en" target="_blank">Yang Feng</a><sup>1,2,*</sup>
+                        <a href="https://people.ucas.edu.cn/~yangfeng?language=en" target="_blank">Yang Feng</a><sup>1,2,3,*</sup>
                       </span>
                       </div>
     
                       <div class="is-size-5 publication-authors">
-                        <span class="author-block"><sup>1</sup>Key Laboratory of Intelligent Information Processing, Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS)<br><sup>2</sup>University of Chinese Academy of Sciences<br><font color="red">ACL 2024 Main Conference</font></span>
+                        <span class="author-block"><sup>1</sup>Key Laboratory of Intelligent Information Processing, Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS)<br><sup>2</sup>Key Laboratory of AI Safety, Chinese Academy of Sciences<br><sup>3</sup>University of Chinese Academy of Sciences<br><font color="red">ACL 2024 Main Conference</font></span>
                       </div>
     
                       <div class="column has-text-centered">
@@ -156,7 +156,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-                Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, they sometimes suffer from producing hallucinations, particularly in cases where they may generate untruthful responses despite possessing the correct knowledge. In this paper, we propose TruthX, an inferencetime method to elicit the truthfulness of LLMs by editing their internal representations in truthful space. TruthX employs an auto-encoder to map LLM’s representations into semantic and truthful latent spaces respectively, and applies contrastive learning to identify a truthful editing direction within the truthful space. During inference, by editing LLM’s internal representations in truthful space, TruthX effectively enhances the truthfulness of LLMs. Experiments show that TruthX effectively improves the truthfulness of 13 advanced LLMs by an average of 20% on TruthfulQA benchmark. Further analyses suggest that the truthful space acquired by TruthX plays a pivotal role in controlling LLM to produce truthful or hallucinatory responses.
+                Large Language Models (LLMs) sometimes suffer from producing hallucinations, especially LLMs may generate untruthful responses despite knowing the correct knowledge. Activating the truthfulness within LLM is the key to fully unlocking LLM's knowledge potential. In this paper, we propose TruthX, an inference-time intervention method to activate the truthfulness of LLM by identifying and editing the features within LLM's internal representations that govern the truthfulness. TruthX employs an auto-encoder to map LLM's representations into semantic and truthful latent spaces respectively, and applies contrastive learning to identify a truthful editing direction within the truthful space. During inference, by editing LLM's internal representations in truthful space, TruthX effectively enhances the truthfulness of LLM. Experiments show that TruthX improves the truthfulness of 13 advanced LLMs by an average of 20% on TruthfulQA benchmark. Further analyses suggest that TruthX can control LLM to produce truthful or hallucinatory responses via editing only one vector in LLM's internal representations.
             </p>
           </div>
         </div>
@@ -171,8 +171,8 @@
           <h2 class="title is-3 has-text-centered">Introducing TruthX</h2>
           <div class="content has-text-justified">
             <p>
-              <strong>TruthXis an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space.</strong> <br>
-              To edit LLM in the truthful space without compromising its generative capabilities, TruthX decouples the LLM’s internal representations into truthful and semantic latent spaces respectively using an autoencoder. Then, TruthX employs contrastive learning to probe representations with similar semantics but opposite truthfulness and those with similar truthfulness but different semantics within these two latent spaces. During inference, TruthX effectively regulates the truthfulness of LLM by editing it in the truthful space, while ensuring that the generation capability remains intact.<br><br>
+              <strong>TruthX is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space.</strong> <br>
+              To edit LLM in the truthful space without compromising its generative capabilities, TruthX decouples the LLM's internal representations into truthful and semantic latent spaces respectively using an autoencoder. Then, TruthX employs contrastive learning to probe representations with similar semantics but opposite truthfulness and those with similar truthfulness but different semantics within these two latent spaces. During inference, TruthX effectively regulates the truthfulness of LLM by editing it in the truthful space, while ensuring that the generation capability remains intact.<br><br>
             </p>
             <center>
               <img src="meta/images/model.png" width="100%">
